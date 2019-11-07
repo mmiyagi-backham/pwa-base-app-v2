@@ -1,4 +1,7 @@
 export default {
+  router: {
+    base: '/pwa-base-app-v2/'
+  },
   mode: 'spa',
   /*
    ** Headers of the page
