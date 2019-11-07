@@ -4,6 +4,13 @@
       <logo />
       <h1 class="title">pwa-base-app-v2</h1>
       <h2 class="subtitle">My wicked Nuxt.js projects YEAH!!</h2>
+      <div class="actions">
+        <a @click="addTada">🎉 {{ tada }}</a>
+        <a @click="addSparkles">✨ {{ sparkles }}</a>
+        <a @click="addThumbsup">👍 {{ thumbsup }}</a>
+        <a @click="addHeart">🧡 {{ heart }}</a>
+        <a @click="clear">Clear</a>
+      </div>
     </div>
   </div>
 </template>
@@ -14,6 +21,34 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  data() {
+    return {
+      tada: 0,
+      sparkles: 0,
+      thumbsup: 0,
+      heart: 0
+    }
+  },
+  methods: {
+    addTada() {
+      this.tada++
+    },
+    addSparkles() {
+      this.sparkles++
+    },
+    addThumbsup() {
+      this.thumbsup++
+    },
+    addHeart() {
+      this.heart++
+    },
+    clear() {
+      this.tada = 0
+      this.sparkles = 0
+      this.thumbsup = 0
+      this.heart = 0
+    }
   }
 }
 </script>
